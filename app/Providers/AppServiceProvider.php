@@ -4,19 +4,25 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use App\Interfaces\RolInterface;
+use App\Repositories\RolRepository;
+
+use App\Interfaces\UsuarioInterface;
+use App\Repositories\UsuarioRepository;
+
+use App\Interfaces\ProyectoInterface;
+use App\Repositories\ProyectoRepository;
+
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
+
     public function register(): void
     {
-        //
+        $this->app->bind(RolInterface::class, RolRepository::class);
+        $this->app->bind(UsarioInterface::class, UsuarioRepository::class);
+        $this->app->bind(ProyectoInterface::class, ProyectoRepository::class);
     }
 
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
         //
