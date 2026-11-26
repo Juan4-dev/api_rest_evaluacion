@@ -6,10 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Interfaces\RolInterface;
 use App\Repositories\RolRepository;
-
 use App\Interfaces\UsuarioInterface;
 use App\Repositories\UsuarioRepository;
-
 use App\Interfaces\ProyectoInterface;
 use App\Repositories\ProyectoRepository;
 
